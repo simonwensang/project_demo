@@ -1,0 +1,24 @@
+urms:
+  config:
+    loginServerUrlPrefix: http://web.sangyiwen.top/#/login
+    shiroServerUrlPrefix: http://web.sangyiwen.top
+    anons:
+       /*.html: anon
+       /component/**: anon
+       /**i18n/**: anon
+       /**.js: anon
+       /static/**: anon
+       /**.ttf: anon
+       /**.css: anon
+       /**.map: anon
+       /**.woff: anon
+       /login : anon
+       /logout: anon
+       /metrics: anon
+       /api-docs/**: anon
+       /test/applicationAlive: anon
+       /images/**: anon
+       /lang/**: anon
+       /lib/**: anon
+       /css/**: anon
+       /fonts/**: anon

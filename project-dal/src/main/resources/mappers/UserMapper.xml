@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.allbuywine.mc.dao.UserMapper">
+<mapper namespace="com.project.mc.dao.UserMapper">
     <resultMap id="BaseResultMap" type="com.project.mc.model.User">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="account" jdbcType="VARCHAR" property="account" />
@@ -76,7 +76,7 @@
     id, account, open_id, session_key, name, code, password, mobile, create_time, update_time, 
     u_status
   </sql>
-  <select id="selectByExample" parameterType="com.allbuywine.mc.model.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.project.mc.model.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,13 +101,13 @@
     delete from wm_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.allbuywine.mc.model.UserExample">
+  <delete id="deleteByExample" parameterType="com.project.mc.model.UserExample">
     delete from wm_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.allbuywine.mc.model.User">
+  <insert id="insert" parameterType="com.project.mc.model.User">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       select LAST_INSERT_ID()
     </selectKey>
@@ -120,7 +120,7 @@
       #{mobile,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{uStatus,jdbcType=TINYINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.allbuywine.mc.model.User">
+  <insert id="insertSelective" parameterType="com.project.mc.model.User">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       select LAST_INSERT_ID()
     </selectKey>
@@ -190,7 +190,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.allbuywine.mc.model.UserExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.project.mc.model.UserExample" resultType="java.lang.Long">
     select count(*) from wm_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -254,7 +254,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.allbuywine.mc.model.User">
+  <update id="updateByPrimaryKeySelective" parameterType="com.project.mc.model.User">
     update wm_user
     <set>
       <if test="account != null">
@@ -290,7 +290,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.allbuywine.mc.model.User">
+  <update id="updateByPrimaryKey" parameterType="com.project.mc.model.User">
     update wm_user
     set account = #{account,jdbcType=VARCHAR},
       open_id = #{openId,jdbcType=VARCHAR},
@@ -315,7 +315,7 @@
         FOR UPDATE
     </select>
     
-    <select id="queryUser" resultMap="BaseResultMap" parameterType="com.allbuywine.mc.req.UserQueryDTO">
+    <select id="queryUser" resultMap="BaseResultMap" parameterType="com.project.mc.req.UserQueryDTO">
         SELECT
          <choose>
           <when test="returnFields!=null">${returnFields}</when>

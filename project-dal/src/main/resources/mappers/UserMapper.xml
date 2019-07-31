@@ -315,54 +315,6 @@
         FOR UPDATE
     </select>
     
-    <select id="queryUser" resultMap="BaseResultMap" parameterType="com.project.mc.req.UserQueryDTO">
-        SELECT
-         <choose>
-          <when test="returnFields!=null">${returnFields}</when>
-          <otherwise>
-            <include refid="Base_Column_List" />
-          </otherwise>
-        </choose>
-        FROM wm_user
-        <where>
-            <if test="id!=null">AND id = #{id,jdbcType=BIGINT}</if>
-            <if test="idList != null and idList.size > 0">
-                <foreach item="item" separator="," open="AND id in (" close=")" collection="idList">#{item,jdbcType=BIGINT}</foreach>
-            </if>
-            <if test="account!=null and account!=''">AND account = #{account,jdbcType=VARCHAR}</if>
-            <if test="accountLike != null and accountLike != '' ">AND account LIKE concat(#{accountLike,jdbcType=VARCHAR},'%')</if>
-            <if test="openId!=null and openId!=''">AND open_id = #{openId,jdbcType=VARCHAR}</if>
-            <if test="openIdLike != null and openIdLike != '' ">AND open_id LIKE concat(#{openIdLike,jdbcType=VARCHAR},'%')</if>
-            <if test="sessionKey!=null and sessionKey!=''">AND session_key = #{sessionKey,jdbcType=VARCHAR}</if>
-            <if test="sessionKeyLike != null and sessionKeyLike != '' ">AND session_key LIKE concat(#{sessionKeyLike,jdbcType=VARCHAR},'%')</if>
-            <if test="sessionKeyList != null and sessionKeyList.size > 0">
-                <foreach item="item" separator="," open="AND session_key in (" close=")" collection="sessionKeyList">#{item,jdbcType=VARCHAR}</foreach>
-            </if>
-            <if test="name!=null and name!=''">AND name = #{name,jdbcType=VARCHAR}</if>
-            <if test="nameLike != null and nameLike != '' ">AND name LIKE concat(#{nameLike,jdbcType=VARCHAR},'%')</if>
-            <if test="code!=null and code!=''">AND code = #{code,jdbcType=VARCHAR}</if>
-            <if test="codeLike != null and codeLike != '' ">AND code LIKE concat(#{codeLike,jdbcType=VARCHAR},'%')</if>
-            <if test="password!=null and password!=''">AND password = #{password,jdbcType=VARCHAR}</if>
-            <if test="passwordLike != null and passwordLike != '' ">AND password LIKE concat(#{passwordLike,jdbcType=VARCHAR},'%')</if>
-            <if test="mobile!=null and mobile!=''">AND mobile = #{mobile,jdbcType=VARCHAR}</if>
-            <if test="mobileLike != null and mobileLike != '' ">AND mobile LIKE concat(#{mobileLike,jdbcType=VARCHAR},'%')</if>
-            <if test="mobileList != null and mobileList.size > 0">
-                <foreach item="item" separator="," open="AND mobile in (" close=")" collection="mobileList">#{item,jdbcType=VARCHAR}</foreach>
-            </if>
-            <if test="createTimeFrom != null"><![CDATA[AND create_time >= #{createTimeFrom,jdbcType=TIMESTAMP}]]></if>
-            <if test="createTimeTo != null"><![CDATA[AND create_time <= #{createTimeTo,jdbcType=TIMESTAMP}]]></if>
-            <if test="updateTimeFrom != null"><![CDATA[AND update_time >= #{updateTimeFrom,jdbcType=TIMESTAMP}]]></if>
-            <if test="updateTimeTo != null"><![CDATA[AND update_time <= #{updateTimeTo,jdbcType=TIMESTAMP}]]></if>
-            <if test="uStatus!=null">AND u_status = #{uStatus,jdbcType=TINYINT}</if>
-            <if test="uStatusList != null and uStatusList.size > 0">
-                <foreach item="item" separator="," open="AND u_status in (" close=")" collection="uStatusList">#{item,jdbcType=TINYINT}</foreach>
-            </if>
-        </where>
-        <choose>
-            <when test="order!=null and orderBy!=null and order!='' and orderBy!=''">order by ${orderBy} ${order}</when>
-            <otherwise>order by id desc</otherwise>
-        </choose>
-    </select>
 
     <insert id="insertBatch" parameterType="java.util.List">
         insert into wm_user (

@@ -23,7 +23,7 @@ import java.lang.reflect.Method;
 public class commonBizInterceptor {
     private final Logger logger = LoggerFactory.getLogger(commonBizInterceptor.class);
 
-    @Around("execution(* com.allbuywine.mc.service..*.*(..))")
+    @Around("execution(* com.project.mc.service..*.*(..))")
     //@Around("execution(* com.chinaredstar.mmc.service.client.impl.*.*(..))")
     public Object intercept(ProceedingJoinPoint pjp) throws Throwable {
         Class<?> targetClass = pjp.getTarget().getClass();

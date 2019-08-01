@@ -1,6 +1,6 @@
 package com.project.mc.config;
 
-import com.allbuywine.mc.common.util.IdWorker;
+import com.project.mc.common.util.IdWorker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

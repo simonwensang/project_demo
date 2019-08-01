@@ -2,8 +2,8 @@ package com.project.mc.config.shiro;
 
 import com.alibaba.fastjson.JSON;
 import com.project.mc.bean.SessionUser;
-import com.allbuywine.mc.common.constants.Constants;
-import com.allbuywine.mc.common.constants.UserStatus;
+import com.project.mc.common.constants.Constants;
+import com.project.mc.common.constants.UserStatus;
 
 import com.project.mc.convertor.SessionUserConvertor;
 import org.apache.shiro.authc.AuthenticationException;

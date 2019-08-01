@@ -23,7 +23,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 import javax.servlet.Filter;
 
-@ComponentScan(basePackages = { "com.allbuywine" })
+@ComponentScan(basePackages = { "com.project" })
 @EnableAutoConfiguration(exclude = { SessionAutoConfiguration.class, DataSourceAutoConfiguration.class, RedisAutoConfiguration.class})
 @Configuration
 @Import(ShiroSecurityConfig.class)

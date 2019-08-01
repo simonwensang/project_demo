@@ -21,12 +21,12 @@
             <property name="forceBigDecimals" value="true"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.allbuywine.model"
+        <javaModelGenerator targetPackage="com.project.model"
                             targetProject="E:\ideaworkspace\wmserver\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.allbuywine.mapper"
+        <sqlMapGenerator targetPackage="com.project.mapper"
                          targetProject="E:\ideaworkspace\wmserver\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>

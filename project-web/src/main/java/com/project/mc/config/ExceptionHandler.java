@@ -1,6 +1,6 @@
 package com.project.mc.config;
 
-import com.allbuywine.mc.result.McResultCode;
+import com.project.mc.result.McResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;

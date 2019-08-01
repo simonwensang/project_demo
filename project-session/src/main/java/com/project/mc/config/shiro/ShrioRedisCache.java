@@ -1,6 +1,6 @@
 package com.project.mc.config.shiro;
 
-import com.allbuywine.mc.common.util.SerializeUtils;
+import com.project.mc.common.util.SerializeUtils;
 import com.google.common.collect.Sets;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.shiro.cache.Cache;

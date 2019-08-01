@@ -1,11 +1,11 @@
-package com.allbuywine.mc.test;
+package com.project.mc.test;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.allbuywine.mc.common.util.FileUtil;
-import com.allbuywine.mc.result.McResult;
-import com.allbuywine.mc.result.McResultCode;
+import com.project.mc.common.util.FileUtil;
+import com.project.mc.result.McResult;
+import com.project.mc.result.McResultCode;
 
 
 import static org.junit.Assert.assertEquals;

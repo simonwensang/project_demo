@@ -1,8 +1,8 @@
 package com.project.mc.biz.util;
 
 
-import com.allbuywine.mc.result.McResult;
-import com.allbuywine.mc.result.McResultCode;
+import com.project.mc.result.McResult;
+import com.project.mc.result.McResultCode;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;

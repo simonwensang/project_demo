@@ -21,7 +21,7 @@
             <property name="forceBigDecimals" value="true"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.allbuywine.model"
+        <javaModelGenerator targetPackage="com.project.model"
                             targetProject="/Users/souibun/IdeaProjects/wine/wine-dal/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
@@ -33,7 +33,7 @@
 
 
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.allbuywine.mapper"
+                             targetPackage="com.project.mapper"
                              targetProject="/Users/souibun/IdeaProjects/wine/wine-dal/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>

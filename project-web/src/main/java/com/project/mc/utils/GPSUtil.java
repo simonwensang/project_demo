@@ -1,7 +1,7 @@
 package com.project.mc.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.allbuywine.mc.result.GpsspgResult;
+import com.project.mc.result.GpsspgResult;
 import com.google.common.collect.Lists;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;

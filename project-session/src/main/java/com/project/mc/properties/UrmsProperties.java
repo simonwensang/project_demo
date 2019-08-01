@@ -26,7 +26,7 @@ public class UrmsProperties {
     /**
      * 邮件前缀
      */
-    private String emailSuffix = "@allbuywine.com";
+    private String emailSuffix = "@divine.com";
 
     /**
      * 登录成功后跳转地址

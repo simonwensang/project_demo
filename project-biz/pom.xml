@@ -23,7 +23,7 @@
         </dependency>
         <dependency>
             <groupId>com.abw</groupId>
-            <artifactId>wine-core</artifactId>
+            <artifactId>project-core</artifactId>
             <version>${project.core.version}</version>
         </dependency>
         <!-- inner module end -->

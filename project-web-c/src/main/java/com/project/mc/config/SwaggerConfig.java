@@ -38,7 +38,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         ApiInfo apiInfo = new ApiInfo(
-                "allbuywine web demao api",
+                "project web demao api",
                 "web project quick start",
                 "My Apps API terms of impl",
                 "sangyiwen456@126.com",

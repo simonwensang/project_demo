@@ -33,7 +33,7 @@
         <org.springframework.boot>1.3.3.RELEASE</org.springframework.boot>
         <io.dropwizard.metrics>3.1.2</io.dropwizard.metrics>
         <org.apache.httpcomponents>4.3.3</org.apache.httpcomponents>
-        <com.fasterxml.jackson>2.6.5</com.fasterxml.jackson>
+        <com.fasterxml.jackson>2.9.10.8</com.fasterxml.jackson>
         <org.thymeleaf>2.1.4.RELEASE</org.thymeleaf>
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
 
